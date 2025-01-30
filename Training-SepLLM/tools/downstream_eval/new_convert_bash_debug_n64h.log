@@ -1,0 +1,250 @@
+2025-01-03:14:47:19,965 INFO     [utils.py:148] Note: NumExpr detected 32 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-01-03:14:47:20,899 INFO     [config.py:59] PyTorch version 2.1.0+cu121 available.
+2025-01-03:14:47:26,844 INFO     [__main__.py:132] Verbosity set to INFO
+2025-01-03:14:47:50,137 INFO     [__main__.py:205] Selected Tasks: ['arc_challenge', 'arc_easy', 'lambada_openai', 'logiqa', 'piqa', 'sciq', 'wikitext', 'winogrande', 'wsc']
+2025-01-03:14:47:50,147 WARNING  [evaluator.py:93] generation_kwargs specified through cli, these settings will be used over set parameters in yaml tasks.
+2025-01-03:14:47:51,420 INFO     [huggingface.py:120] Using device 'cuda:0'
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2025-01-03:14:47:52,164 WARNING  [huggingface.py:284] WARNING: The number of total system GPUs does not match the number of spawned processes. If you would like to use data parallelism, please launch the script with 'accelerate launch *script*'. Current run will proceed with 1 devices.
+2025-01-03:14:48:03,337 WARNING  [task.py:300] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+2025-01-03:14:48:03,338 WARNING  [task.py:300] has_training_docs and has_validation_docs are False, using test_docs as fewshot_docs but this is not recommended.
+###########################k and window_size, etc.############################################
+prefill_k: 0
+decode_k: 0
+self.prefill_win_size_list: [2048, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64]
+self.decode_win_size_list: [2048, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64]
+self.Layer_num: 12
+self.att_sink_max_idx: 2
+self.original_flag:  False
+self.streamingLLM:  False
+self.random_special_tokens_uniform:  False
+self.random_special_tokens_general:  False
+self.NOT_AVOID_SEP:  False
+self.EXCLUDE_DIAGONAL:  True
+>>> Please be careful of the special_tokens_id, Make sure they are correct for the current LLM
+self.special_tokens_id: [15, 13, 32, 2, 28, 27, 209, 186, 187]
+self.floating_window: True
+This is about NOT streamingLLM since self.decode_k =0, self.prefill_k = 0 and self.streamingLLM: False
+>>>>>>>>---------##########################################################-----------<<<<<<<<
+>>>>>>>>---------                                                          -----------<<<<<<<<
+>>>>>>>>------------------ Running our version of the mask strategy-------------------<<<<<<<<
+>>>>>>>>---------                                                          -----------<<<<<<<<
+>>>>>>>>---------##########################################################-----------<<<<<<<<
+The repository for EleutherAI/logiqa contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/EleutherAI/logiqa.
+You can avoid this prompt in future by passing the argument `trust_remote_code=True`.
+
+Do you wish to run the custom code? [y/N] Downloading data:   0%|          | 0.00/2.11M [00:00<?, ?B/s]Downloading data: 6.28MB [00:00, 84.4MB/s]                   
+Downloading data:   0%|          | 0.00/165k [00:00<?, ?B/s]Downloading data: 559kB [00:00, 46.1MB/s]                   
+Downloading data:   0%|          | 0.00/164k [00:00<?, ?B/s]Downloading data: 550kB [00:00, 40.7MB/s]                   
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 1000 examples [00:00, 9083.06 examples/s]Generating train split: 3717 examples [00:00, 19295.09 examples/s]Generating train split: 6379 examples [00:00, 22399.19 examples/s]Generating train split: 7376 examples [00:00, 19294.02 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 651 examples [00:00, 14928.39 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 651 examples [00:00, 14794.68 examples/s]
+2025-01-03:14:48:18,619 WARNING  [task.py:614] [Task: wikitext] metric word_perplexity is defined, but aggregation is not. using default aggregation=weighted_perplexity
+2025-01-03:14:48:18,619 WARNING  [task.py:626] [Task: wikitext] metric word_perplexity is defined, but higher_is_better is not. using default higher_is_better=False
+2025-01-03:14:48:18,619 WARNING  [task.py:614] [Task: wikitext] metric byte_perplexity is defined, but aggregation is not. using default aggregation=weighted_perplexity
+2025-01-03:14:48:18,619 WARNING  [task.py:626] [Task: wikitext] metric byte_perplexity is defined, but higher_is_better is not. using default higher_is_better=False
+2025-01-03:14:48:18,619 WARNING  [task.py:614] [Task: wikitext] metric bits_per_byte is defined, but aggregation is not. using default aggregation=bits_per_byte
+2025-01-03:14:48:18,619 WARNING  [task.py:626] [Task: wikitext] metric bits_per_byte is defined, but higher_is_better is not. using default higher_is_better=False
+Downloading readme:   0%|          | 0.00/8.76k [00:00<?, ?B/s]Downloading readme: 100%|██████████| 8.76k/8.76k [00:00<00:00, 58.5kB/s]Downloading readme: 100%|██████████| 8.76k/8.76k [00:00<00:00, 57.8kB/s]
+Downloading data:   0%|          | 0.00/6.18M [00:00<?, ?B/s]Downloading data: 100%|██████████| 6.18M/6.18M [00:00<00:00, 23.8MB/s]Downloading data: 100%|██████████| 6.18M/6.18M [00:00<00:00, 21.5MB/s]
+Downloading data:   0%|          | 0.00/641k [00:00<?, ?B/s]Downloading data: 100%|██████████| 641k/641k [00:00<00:00, 4.15MB/s]Downloading data: 100%|██████████| 641k/641k [00:00<00:00, 3.94MB/s]
+Downloading data:   0%|          | 0.00/715k [00:00<?, ?B/s]Downloading data: 100%|██████████| 715k/715k [00:00<00:00, 4.61MB/s]Downloading data: 100%|██████████| 715k/715k [00:00<00:00, 4.38MB/s]
+Generating train split:   0%|          | 0/629 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 629/629 [00:00<00:00, 5826.66 examples/s]Generating train split: 100%|██████████| 629/629 [00:00<00:00, 3899.46 examples/s]
+Generating validation split:   0%|          | 0/60 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 60/60 [00:00<00:00, 2279.88 examples/s]
+Generating test split:   0%|          | 0/62 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 62/62 [00:00<00:00, 2699.12 examples/s]
+Downloading builder script:   0%|          | 0.00/5.65k [00:00<?, ?B/s]Downloading builder script: 100%|██████████| 5.65k/5.65k [00:00<00:00, 22.5kB/s]Downloading builder script: 100%|██████████| 5.65k/5.65k [00:00<00:00, 22.3kB/s]
+Downloading readme:   0%|          | 0.00/9.97k [00:00<?, ?B/s]Downloading readme: 100%|██████████| 9.97k/9.97k [00:00<00:00, 38.5kB/s]Downloading readme: 100%|██████████| 9.97k/9.97k [00:00<00:00, 38.1kB/s]
+The repository for winogrande contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/winogrande.
+You can avoid this prompt in future by passing the argument `trust_remote_code=True`.
+
+Do you wish to run the custom code? [y/N] Downloading data:   0%|          | 0.00/3.40M [00:00<?, ?B/s]Downloading data: 100%|██████████| 3.40M/3.40M [00:00<00:00, 57.5MB/s]
+Generating train split:   0%|          | 0/40398 [00:00<?, ? examples/s]Generating train split:   9%|▉         | 3548/40398 [00:00<00:01, 34636.80 examples/s]Generating train split:  18%|█▊        | 7349/40398 [00:00<00:00, 36596.64 examples/s]Generating train split:  28%|██▊       | 11151/40398 [00:00<00:00, 37239.48 examples/s]Generating train split:  37%|███▋      | 15000/40398 [00:00<00:00, 37596.12 examples/s]Generating train split:  47%|████▋     | 18894/40398 [00:00<00:00, 38073.43 examples/s]Generating train split:  61%|██████    | 24623/40398 [00:00<00:00, 38122.79 examples/s]Generating train split:  70%|███████   | 28444/40398 [00:00<00:00, 38145.75 examples/s]Generating train split:  85%|████████▍ | 34152/40398 [00:00<00:00, 38109.15 examples/s]Generating train split:  94%|█████████▍| 38000/40398 [00:01<00:00, 38165.82 examples/s]Generating train split: 100%|██████████| 40398/40398 [00:01<00:00, 36927.23 examples/s]
+Generating test split:   0%|          | 0/1767 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1767/1767 [00:00<00:00, 29470.52 examples/s]
+Generating validation split:   0%|          | 0/1267 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 1267/1267 [00:00<00:00, 27283.70 examples/s]
+2025-01-03:14:48:32,118 WARNING  [task.py:614] [Task: wsc] metric acc is defined, but aggregation is not. using default aggregation=mean
+2025-01-03:14:48:32,118 WARNING  [task.py:626] [Task: wsc] metric acc is defined, but higher_is_better is not. using default higher_is_better=True
+Downloading builder script:   0%|          | 0.00/30.7k [00:00<?, ?B/s]Downloading builder script: 100%|██████████| 30.7k/30.7k [00:00<00:00, 108kB/s]Downloading builder script: 100%|██████████| 30.7k/30.7k [00:00<00:00, 107kB/s]
+Downloading readme:   0%|          | 0.00/18.2k [00:00<?, ?B/s]Downloading readme: 100%|██████████| 18.2k/18.2k [00:00<00:00, 70.4kB/s]Downloading readme: 100%|██████████| 18.2k/18.2k [00:00<00:00, 69.7kB/s]
+The repository for super_glue contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/super_glue.
+You can avoid this prompt in future by passing the argument `trust_remote_code=True`.
+
+Do you wish to run the custom code? [y/N] Downloading data:   0%|          | 0.00/32.8k [00:00<?, ?B/s]Downloading data:  53%|█████▎    | 17.4k/32.8k [00:00<00:00, 127kB/s]Downloading data: 100%|██████████| 32.8k/32.8k [00:00<00:00, 238kB/s]
+Generating train split:   0%|          | 0/554 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 554/554 [00:00<00:00, 12580.37 examples/s]
+Generating validation split:   0%|          | 0/104 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 104/104 [00:00<00:00, 7527.44 examples/s]
+Generating test split:   0%|          | 0/146 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 146/146 [00:00<00:00, 8681.64 examples/s]
+2025-01-03:14:48:39,466 WARNING  [evaluator.py:143] Overwriting default num_fewshot of arc_challenge from None to 5
+2025-01-03:14:48:39,466 WARNING  [evaluator.py:143] Overwriting default num_fewshot of arc_easy from None to 5
+2025-01-03:14:48:39,466 WARNING  [evaluator.py:143] Overwriting default num_fewshot of lambada_openai from None to 5
+2025-01-03:14:48:39,466 WARNING  [evaluator.py:143] Overwriting default num_fewshot of logiqa from None to 5
+2025-01-03:14:48:39,466 WARNING  [evaluator.py:143] Overwriting default num_fewshot of piqa from None to 5
+2025-01-03:14:48:39,466 WARNING  [evaluator.py:143] Overwriting default num_fewshot of sciq from None to 5
+2025-01-03:14:48:39,466 WARNING  [evaluator.py:143] Overwriting default num_fewshot of wikitext from None to 5
+2025-01-03:14:48:39,466 WARNING  [evaluator.py:143] Overwriting default num_fewshot of winogrande from None to 5
+2025-01-03:14:48:39,466 WARNING  [evaluator.py:143] Overwriting default num_fewshot of wsc from None to 5
+2025-01-03:14:48:39,467 INFO     [task.py:355] Building contexts for task on rank 0...
+2025-01-03:14:48:51,155 INFO     [task.py:355] Building contexts for task on rank 0...
+2025-01-03:14:49:12,853 INFO     [task.py:355] Building contexts for task on rank 0...
+2025-01-03:14:49:54,598 INFO     [task.py:355] Building contexts for task on rank 0...
+2025-01-03:14:49:55,482 INFO     [task.py:355] Building contexts for task on rank 0...
+2025-01-03:14:50:02,900 INFO     [task.py:355] Building contexts for task on rank 0...
+2025-01-03:14:50:08,952 INFO     [task.py:355] Building contexts for task on rank 0...
+2025-01-03:14:50:09,529 INFO     [task.py:355] Building contexts for task on rank 0...
+2025-01-03:14:50:09,611 INFO     [task.py:355] Building contexts for task on rank 0...
+2025-01-03:14:50:09,625 INFO     [evaluator.py:319] Running loglikelihood requests
+#################in loglikelihood#####################
+#################in _loglikelihood_tokens#####################
+  0%|          | 0/32363 [00:00<?, ?it/s]  0%|          | 1/32363 [00:09<87:26:16,  9.73s/it]  0%|          | 65/32363 [00:10<1:03:27,  8.48it/s]  0%|          | 129/32363 [00:11<29:51, 17.99it/s]   1%|          | 193/32363 [00:11<18:46, 28.55it/s]  1%|          | 257/32363 [00:12<13:28, 39.70it/s]  1%|          | 321/32363 [00:13<10:33, 50.60it/s]  1%|          | 385/32363 [00:13<08:41, 61.34it/s]  1%|▏         | 449/32363 [00:14<07:29, 70.94it/s]  2%|▏         | 513/32363 [00:15<06:39, 79.75it/s]  2%|▏         | 577/32363 [00:15<06:04, 87.32it/s]  2%|▏         | 641/32363 [00:16<05:37, 94.03it/s]  2%|▏         | 705/32363 [00:16<05:15, 100.29it/s]  2%|▏         | 769/32363 [00:17<05:01, 104.66it/s]  3%|▎         | 833/32363 [00:17<04:53, 107.26it/s]  3%|▎         | 897/32363 [00:18<04:46, 109.74it/s]  3%|▎         | 961/32363 [00:18<04:40, 111.90it/s]  3%|▎         | 1025/32363 [00:19<04:34, 114.06it/s]  3%|▎         | 1089/32363 [00:19<04:26, 117.25it/s]  4%|▎         | 1153/32363 [00:20<04:24, 118.14it/s]  4%|▍         | 1217/32363 [00:21<04:20, 119.47it/s]  4%|▍         | 1281/32363 [00:21<04:17, 120.86it/s]  4%|▍         | 1345/32363 [00:22<04:11, 123.54it/s]  4%|▍         | 1409/32363 [00:22<04:06, 125.82it/s]  5%|▍         | 1473/32363 [00:23<04:01, 127.90it/s]  5%|▍         | 1537/32363 [00:23<03:57, 129.78it/s]  5%|▍         | 1601/32363 [00:23<03:54, 131.31it/s]  5%|▌         | 1665/32363 [00:24<03:53, 131.22it/s]  5%|▌         | 1729/32363 [00:24<03:52, 131.58it/s]  6%|▌         | 1793/32363 [00:25<03:51, 132.20it/s]  6%|▌         | 1857/32363 [00:25<03:45, 135.29it/s]  6%|▌         | 1921/32363 [00:26<03:44, 135.62it/s]  6%|▌         | 1985/32363 [00:26<03:42, 136.26it/s]  6%|▋         | 2049/32363 [00:27<03:40, 137.17it/s]  7%|▋         | 2113/32363 [00:27<03:34, 141.24it/s]  7%|▋         | 2177/32363 [00:28<03:29, 144.09it/s]  7%|▋         | 2241/32363 [00:28<03:27, 145.37it/s]  7%|▋         | 2305/32363 [00:28<03:24, 147.02it/s]  7%|▋         | 2369/32363 [00:29<03:21, 148.55it/s]  8%|▊         | 2433/32363 [00:29<03:19, 150.24it/s]  8%|▊         | 2497/32363 [00:30<03:15, 152.39it/s]  8%|▊         | 2561/32363 [00:30<03:12, 154.56it/s]  8%|▊         | 2625/32363 [00:30<03:04, 161.05it/s]  8%|▊         | 2689/32363 [00:31<03:02, 162.97it/s]  9%|▊         | 2753/32363 [00:31<02:56, 168.07it/s]  9%|▊         | 2817/32363 [00:32<02:48, 175.28it/s]  9%|▉         | 2881/32363 [00:32<02:42, 181.90it/s]  9%|▉         | 2945/32363 [00:32<02:37, 186.19it/s]  9%|▉         | 3009/32363 [00:32<02:32, 192.12it/s]  9%|▉         | 3073/32363 [00:33<02:27, 198.43it/s] 10%|▉         | 3137/32363 [00:33<02:24, 202.51it/s] 10%|▉         | 3201/32363 [00:33<02:20, 207.38it/s] 10%|█         | 3265/32363 [00:34<02:15, 214.49it/s] 10%|█         | 3329/32363 [00:34<02:09, 223.77it/s] 10%|█         | 3393/32363 [00:34<02:04, 232.37it/s] 11%|█         | 3457/32363 [00:34<02:01, 238.48it/s] 11%|█         | 3521/32363 [00:35<01:56, 246.81it/s] 11%|█         | 3585/32363 [00:35<01:52, 255.93it/s] 11%|█▏        | 3649/32363 [00:35<01:49, 261.58it/s] 11%|█▏        | 3713/32363 [00:35<01:46, 269.96it/s] 12%|█▏        | 3777/32363 [00:36<01:41, 282.81it/s] 12%|█▏        | 3841/32363 [00:36<01:38, 290.40it/s] 12%|█▏        | 3905/32363 [00:36<01:35, 297.19it/s] 12%|█▏        | 3969/32363 [00:36<01:32, 307.30it/s] 12%|█▏        | 4033/32363 [00:36<01:30, 314.66it/s] 13%|█▎        | 4097/32363 [00:37<01:26, 325.00it/s] 13%|█▎        | 4161/32363 [00:37<01:24, 332.20it/s] 13%|█▎        | 4225/32363 [00:37<01:22, 339.74it/s] 13%|█▎        | 4289/32363 [00:37<01:20, 347.17it/s] 13%|█▎        | 4353/32363 [00:37<01:18, 354.68it/s] 14%|█▎        | 4417/32363 [00:37<01:16, 366.60it/s] 14%|█▍        | 4481/32363 [00:38<01:13, 376.84it/s] 14%|█▍        | 4545/32363 [00:38<01:12, 385.97it/s] 14%|█▍        | 4609/32363 [00:38<01:10, 394.15it/s] 14%|█▍        | 4673/32363 [00:38<01:08, 403.14it/s] 15%|█▍        | 4737/32363 [00:38<01:07, 411.96it/s] 15%|█▍        | 4801/32363 [00:38<01:05, 420.61it/s] 15%|█▌        | 4865/32363 [00:38<01:04, 428.49it/s] 15%|█▌        | 4929/32363 [00:39<01:02, 440.33it/s] 15%|█▌        | 4993/32363 [00:39<01:00, 451.00it/s] 16%|█▌        | 5057/32363 [00:39<00:59, 459.51it/s] 16%|█▌        | 5121/32363 [00:39<00:58, 466.25it/s] 16%|█▌        | 5185/32363 [00:39<00:57, 475.27it/s] 16%|█▌        | 5249/32363 [00:39<00:56, 480.63it/s] 16%|█▋        | 5313/32363 [00:39<00:55, 488.62it/s] 17%|█▋        | 5377/32363 [00:39<00:54, 492.45it/s] 17%|█▋        | 5441/32363 [00:40<00:54, 495.57it/s] 17%|█▋        | 5505/32363 [00:40<00:53, 499.46it/s] 17%|█▋        | 5569/32363 [00:40<00:53, 502.94it/s] 17%|█▋        | 5633/32363 [00:40<00:52, 506.40it/s] 18%|█▊        | 5697/32363 [00:40<00:52, 509.88it/s] 18%|█▊        | 5761/32363 [00:40<00:51, 512.85it/s] 18%|█▊        | 5825/32363 [00:40<00:51, 518.64it/s] 18%|█▊        | 5889/32363 [00:40<00:50, 523.36it/s] 18%|█▊        | 5953/32363 [00:41<00:49, 529.33it/s]Passed argument batch_size = auto:1. Detecting largest batch size
+Determined largest batch size: 64
+###############################trnMask.kept_tokens_count_seq#####################################
+trnMask.kept_tokens_count_seq (kept, total) : (126026, 411648), ratio: 0.3061499144917353 
+
+###############################trnMask.kept_tokens_count_total for now#####################################
+trnMask.kept_tokens_count_total (kept, total) : (18757276, 77479680), ratio: 0.24209284292347047 
+
+###############################trnMask.kept_attmap_count_seq#####################################
+trnMask.kept_attmap_count_seq (kept, total) : (43365650, 110527488.0), ratio: 0.39235171978214695 
+
+###############################trnMask.kept_attmap_count_total for now#####################################
+trnMask.kept_attmap_count_total (kept, total) : (12480810731, 45262176768.0), ratio: 0.27574481879147794 
+ 19%|█▊        | 6017/32363 [00:41<00:49, 528.48it/s] 19%|█▉        | 6081/32363 [00:41<00:49, 529.16it/s] 19%|█▉        | 6145/32363 [00:41<00:49, 533.29it/s] 19%|█▉        | 6209/32363 [00:41<00:48, 537.20it/s] 19%|█▉        | 6273/32363 [00:41<00:48, 536.78it/s] 20%|█▉        | 6337/32363 [00:41<00:47, 542.98it/s] 20%|█▉        | 6401/32363 [00:41<00:47, 541.61it/s] 20%|█▉        | 6465/32363 [00:42<00:47, 544.38it/s] 20%|██        | 6529/32363 [00:42<00:47, 543.47it/s] 20%|██        | 6593/32363 [00:42<00:47, 547.14it/s] 21%|██        | 6657/32363 [00:42<00:46, 550.53it/s] 21%|██        | 6721/32363 [00:42<00:46, 549.58it/s] 21%|██        | 6785/32363 [00:42<00:46, 554.97it/s] 21%|██        | 6849/32363 [00:42<00:46, 553.64it/s] 21%|██▏       | 6913/32363 [00:42<00:45, 556.73it/s] 22%|██▏       | 6977/32363 [00:42<00:45, 555.87it/s] 22%|██▏       | 7041/32363 [00:43<00:45, 559.74it/s] 22%|██▏       | 7105/32363 [00:43<00:45, 559.35it/s] 22%|██▏       | 7169/32363 [00:43<00:44, 562.73it/s] 22%|██▏       | 7233/32363 [00:43<00:44, 562.11it/s] 23%|██▎       | 7297/32363 [00:43<00:44, 560.71it/s] 23%|██▎       | 7361/32363 [00:43<00:43, 571.58it/s] 23%|██▎       | 7425/32363 [00:43<00:43, 573.30it/s] 23%|██▎       | 7489/32363 [00:43<00:42, 578.93it/s] 23%|██▎       | 7553/32363 [00:43<00:42, 579.58it/s] 24%|██▎       | 7617/32363 [00:44<00:42, 584.36it/s] 24%|██▎       | 7681/32363 [00:44<00:42, 584.28it/s] 24%|██▍       | 7745/32363 [00:44<00:41, 588.90it/s] 24%|██▍       | 7809/32363 [00:44<00:41, 588.32it/s] 24%|██▍       | 7873/32363 [00:44<00:41, 592.71it/s] 25%|██▍       | 7937/32363 [00:44<00:41, 591.58it/s] 25%|██▍       | 8001/32363 [00:44<00:40, 596.24it/s] 25%|██▍       | 8065/32363 [00:44<00:40, 595.94it/s] 25%|██▌       | 8129/32363 [00:44<00:40, 595.17it/s] 25%|██▌       | 8193/32363 [00:45<00:40, 599.43it/s] 26%|██▌       | 8257/32363 [00:45<00:40, 598.75it/s] 26%|██▌       | 8321/32363 [00:45<00:40, 597.48it/s] 26%|██▌       | 8385/32363 [00:45<00:39, 601.46it/s] 26%|██▌       | 8449/32363 [00:45<00:39, 600.57it/s] 26%|██▋       | 8513/32363 [00:45<00:39, 606.34it/s] 27%|██▋       | 8577/32363 [00:45<00:39, 604.96it/s] 27%|██▋       | 8641/32363 [00:45<00:39, 603.56it/s] 27%|██▋       | 8705/32363 [00:45<00:38, 608.02it/s] 27%|██▋       | 8769/32363 [00:45<00:38, 607.68it/s] 27%|██▋       | 8833/32363 [00:46<00:38, 612.39it/s] 27%|██▋       | 8897/32363 [00:46<00:38, 615.17it/s] 28%|██▊       | 8961/32363 [00:46<00:38, 613.35it/s] 28%|██▊       | 9025/32363 [00:46<00:37, 617.05it/s] 28%|██▊       | 9089/32363 [00:46<00:37, 615.42it/s] 28%|██▊       | 9153/32363 [00:46<00:37, 613.52it/s] 28%|██▊       | 9217/32363 [00:46<00:37, 618.20it/s] 29%|██▊       | 9281/32363 [00:46<00:37, 617.13it/s] 29%|██▉       | 9345/32363 [00:46<00:36, 622.31it/s] 29%|██▉       | 9409/32363 [00:47<00:36, 624.59it/s] 29%|██▉       | 9473/32363 [00:47<00:36, 622.23it/s] 29%|██▉       | 9537/32363 [00:47<00:36, 626.53it/s] 30%|██▉       | 9601/32363 [00:47<00:36, 625.43it/s] 30%|██▉       | 9666/32363 [00:47<00:35, 632.63it/s] 30%|███       | 9730/32363 [00:47<00:35, 630.91it/s] 30%|███       | 9820/32363 [00:47<00:31, 710.50it/s] 31%|███       | 9892/32363 [00:47<00:31, 709.59it/s] 31%|███       | 9975/32363 [00:47<00:30, 745.36it/s] 31%|███       | 10050/32363 [00:48<00:38, 582.35it/s] 31%|███▏      | 10114/32363 [00:48<00:37, 596.04it/s] 32%|███▏      | 10206/32363 [00:48<00:32, 680.97it/s] 32%|███▏      | 10305/32363 [00:48<00:36, 609.36it/s] 32%|███▏      | 10387/32363 [00:48<00:33, 659.18it/s] 32%|███▏      | 10497/32363 [00:48<00:35, 624.33it/s] 33%|███▎      | 10587/32363 [00:48<00:31, 686.64it/s] 33%|███▎      | 10686/32363 [00:48<00:28, 760.73it/s] 33%|███▎      | 10768/32363 [00:49<00:33, 636.28it/s] 34%|███▎      | 10881/32363 [00:49<00:34, 626.23it/s] 34%|███▍      | 11009/32363 [00:49<00:32, 647.10it/s] 34%|███▍      | 11137/32363 [00:49<00:31, 671.27it/s] 35%|███▍      | 11265/32363 [00:49<00:30, 697.97it/s] 35%|███▌      | 11393/32363 [00:49<00:29, 720.10it/s] 36%|███▌      | 11521/32363 [00:50<00:27, 747.96it/s] 36%|███▌      | 11649/32363 [00:50<00:26, 787.89it/s] 36%|███▋      | 11777/32363 [00:50<00:24, 826.26it/s] 37%|███▋      | 11905/32363 [00:50<00:23, 867.26it/s] 37%|███▋      | 12033/32363 [00:50<00:22, 906.15it/s] 38%|███▊      | 12161/32363 [00:50<00:21, 945.23it/s] 38%|███▊      | 12289/32363 [00:50<00:20, 991.43it/s]
+###############################trnMask.kept_tokens_count_seq#####################################
+trnMask.kept_tokens_count_seq (kept, total) : (96191, 242688), ratio: 0.39635663897928053 
+
+###############################trnMask.kept_tokens_count_total for now#####################################
+trnMask.kept_tokens_count_total (kept, total) : (30425539, 113603328), ratio: 0.26782260287304904 
+
+###############################trnMask.kept_attmap_count_seq#####################################
+trnMask.kept_attmap_count_seq (kept, total) : (20239182, 38466048.0), ratio: 0.5261570411392528 
+
+###############################trnMask.kept_attmap_count_total for now#####################################
+trnMask.kept_attmap_count_total (kept, total) : (16076848271, 53897813760.0), ratio: 0.29828386625454106 
+ 38%|███▊      | 12417/32363 [00:51<00:19, 1031.76it/s] 39%|███▉      | 12545/32363 [00:51<00:18, 1069.45it/s] 39%|███▉      | 12673/32363 [00:51<00:17, 1102.70it/s] 40%|███▉      | 12801/32363 [00:51<00:17, 1132.92it/s] 40%|███▉      | 12929/32363 [00:51<00:16, 1161.94it/s] 40%|████      | 13057/32363 [00:51<00:16, 1184.37it/s] 41%|████      | 13192/32363 [00:51<00:15, 1231.37it/s] 41%|████      | 13340/32363 [00:51<00:14, 1302.93it/s] 42%|████▏     | 13497/32363 [00:51<00:13, 1380.81it/s] 42%|████▏     | 13636/32363 [00:51<00:15, 1235.05it/s] 43%|████▎     | 13824/32363 [00:52<00:13, 1410.85it/s] 43%|████▎     | 13970/32363 [00:52<00:14, 1295.02it/s] 44%|████▎     | 14145/32363 [00:52<00:14, 1283.24it/s] 44%|████▍     | 14337/32363 [00:52<00:13, 1325.14it/s] 45%|████▍     | 14529/32363 [00:52<00:13, 1351.60it/s] 45%|████▌     | 14721/32363 [00:52<00:12, 1382.74it/s] 46%|████▌     | 14913/32363 [00:52<00:12, 1416.56it/s] 47%|████▋     | 15105/32363 [00:53<00:11, 1446.13it/s] 47%|████▋     | 15297/32363 [00:53<00:11, 1469.18it/s] 48%|████▊     | 15489/32363 [00:53<00:11, 1492.59it/s] 48%|████▊     | 15681/32363 [00:53<00:11, 1512.52it/s] 49%|████▉     | 15873/32363 [00:53<00:10, 1529.03it/s] 50%|████▉     | 16065/32363 [00:53<00:10, 1546.15it/s] 50%|█████     | 16257/32363 [00:53<00:10, 1560.84it/s] 51%|█████     | 16449/32363 [00:53<00:10, 1576.62it/s] 51%|█████▏    | 16641/32363 [00:53<00:09, 1587.15it/s] 52%|█████▏    | 16833/32363 [00:54<00:09, 1601.62it/s] 53%|█████▎    | 17025/32363 [00:54<00:09, 1618.57it/s] 53%|█████▎    | 17217/32363 [00:54<00:09, 1629.60it/s] 54%|█████▍    | 17409/32363 [00:54<00:09, 1639.81it/s] 54%|█████▍    | 17601/32363 [00:54<00:08, 1653.39it/s] 55%|█████▍    | 17793/32363 [00:54<00:08, 1665.64it/s] 56%|█████▌    | 17985/32363 [00:54<00:08, 1684.36it/s] 56%|█████▌    | 18177/32363 [00:54<00:08, 1696.15it/s] 57%|█████▋    | 18369/32363 [00:55<00:08, 1703.52it/s] 57%|█████▋    | 18561/32363 [00:55<00:08, 1712.92it/s] 58%|█████▊    | 18753/32363 [00:55<00:07, 1716.12it/s]
+###############################trnMask.kept_tokens_count_seq#####################################
+trnMask.kept_tokens_count_seq (kept, total) : (80400, 168192), ratio: 0.4780251141583545 
+
+###############################trnMask.kept_tokens_count_total for now#####################################
+trnMask.kept_tokens_count_total (kept, total) : (38987261, 132879360), ratio: 0.2934034375240873 
+
+###############################trnMask.kept_attmap_count_seq#####################################
+trnMask.kept_attmap_count_seq (kept, total) : (11754907, 18501120.0), ratio: 0.6353619132247327 
+
+###############################trnMask.kept_attmap_count_total for now#####################################
+trnMask.kept_attmap_count_total (kept, total) : (17517248938, 56350587648.0), ratio: 0.3108618679795032 
+ 59%|█████▊    | 18945/32363 [00:55<00:07, 1725.62it/s] 59%|█████▉    | 19137/32363 [00:55<00:07, 1740.14it/s] 60%|█████▉    | 19329/32363 [00:55<00:07, 1745.76it/s] 60%|██████    | 19521/32363 [00:55<00:07, 1757.69it/s] 61%|██████    | 19713/32363 [00:55<00:07, 1764.40it/s] 62%|██████▏   | 19905/32363 [00:55<00:07, 1774.28it/s] 62%|██████▏   | 20097/32363 [00:55<00:06, 1786.01it/s] 63%|██████▎   | 20289/32363 [00:56<00:06, 1791.15it/s] 63%|██████▎   | 20481/32363 [00:56<00:06, 1802.90it/s] 64%|██████▍   | 20673/32363 [00:56<00:06, 1806.87it/s] 64%|██████▍   | 20865/32363 [00:56<00:06, 1819.78it/s] 65%|██████▌   | 21057/32363 [00:56<00:06, 1830.03it/s] 66%|██████▌   | 21249/32363 [00:56<00:06, 1843.66it/s] 66%|██████▋   | 21441/32363 [00:56<00:05, 1850.95it/s] 67%|██████▋   | 21633/32363 [00:56<00:05, 1859.16it/s] 67%|██████▋   | 21825/32363 [00:56<00:05, 1871.77it/s] 68%|██████▊   | 22017/32363 [00:57<00:05, 1877.40it/s] 69%|██████▊   | 22209/32363 [00:57<00:05, 1886.56it/s] 69%|██████▉   | 22401/32363 [00:57<00:05, 1889.42it/s] 70%|██████▉   | 22606/32363 [00:57<00:05, 1936.83it/s] 70%|███████   | 22800/32363 [00:57<00:04, 1935.09it/s] 71%|███████   | 23016/32363 [00:57<00:04, 2001.69it/s] 72%|███████▏  | 23217/32363 [00:57<00:04, 2000.37it/s] 72%|███████▏  | 23425/32363 [00:57<00:04, 1899.42it/s] 73%|███████▎  | 23681/32363 [00:57<00:04, 1943.53it/s] 74%|███████▍  | 23937/32363 [00:58<00:04, 1972.63it/s] 75%|███████▍  | 24193/32363 [00:58<00:04, 1995.92it/s] 76%|███████▌  | 24449/32363 [00:58<00:03, 2020.69it/s] 76%|███████▋  | 24705/32363 [00:58<00:03, 2043.52it/s] 77%|███████▋  | 24961/32363 [00:58<00:03, 2059.48it/s]
+###############################trnMask.kept_tokens_count_seq#####################################
+trnMask.kept_tokens_count_seq (kept, total) : (75945, 139008), ratio: 0.5463354627104459 
+
+###############################trnMask.kept_tokens_count_total for now#####################################
+trnMask.kept_tokens_count_total (kept, total) : (46814879, 148181760), ratio: 0.3159287553339944 
+
+###############################trnMask.kept_attmap_count_seq#####################################
+trnMask.kept_attmap_count_seq (kept, total) : (8991348, 12649728.0), ratio: 0.7107937814947712 
+
+###############################trnMask.kept_attmap_count_total for now#####################################
+trnMask.kept_attmap_count_total (kept, total) : (18548074267, 57887092224.0), ratio: 0.32041813734962427 
+ 78%|███████▊  | 25217/32363 [00:58<00:03, 2072.51it/s] 79%|███████▊  | 25473/32363 [00:58<00:03, 2091.44it/s] 80%|███████▉  | 25729/32363 [00:58<00:03, 2106.88it/s] 80%|████████  | 25985/32363 [00:58<00:02, 2128.72it/s] 81%|████████  | 26241/32363 [00:59<00:02, 2147.66it/s] 82%|████████▏ | 26497/32363 [00:59<00:02, 2168.57it/s] 83%|████████▎ | 26753/32363 [00:59<00:02, 2186.35it/s] 83%|████████▎ | 27009/32363 [00:59<00:02, 2205.65it/s] 84%|████████▍ | 27265/32363 [00:59<00:02, 2229.04it/s] 85%|████████▌ | 27521/32363 [00:59<00:02, 2247.30it/s] 86%|████████▌ | 27777/32363 [00:59<00:02, 2267.33it/s] 87%|████████▋ | 28033/32363 [00:59<00:01, 2281.23it/s] 87%|████████▋ | 28289/32363 [00:59<00:01, 2316.24it/s] 88%|████████▊ | 28545/32363 [01:00<00:01, 2343.61it/s] 89%|████████▉ | 28801/32363 [01:00<00:01, 2364.55it/s] 90%|████████▉ | 29057/32363 [01:00<00:01, 2399.34it/s] 91%|█████████ | 29313/32363 [01:00<00:01, 2441.51it/s] 91%|█████████▏| 29569/32363 [01:00<00:01, 2456.05it/s] 92%|█████████▏| 29883/32363 [01:00<00:00, 2654.82it/s] 94%|█████████▎| 30273/32363 [01:00<00:00, 3016.88it/s] 95%|█████████▍| 30657/32363 [01:00<00:00, 3197.32it/s] 96%|█████████▋| 31169/32363 [01:00<00:00, 3684.61it/s]
+###############################trnMask.kept_tokens_count_seq#####################################
+trnMask.kept_tokens_count_seq (kept, total) : (14592, 14592), ratio: 1.0 
+
+###############################trnMask.kept_tokens_count_total for now#####################################
+trnMask.kept_tokens_count_total (kept, total) : (52512364, 157763328), ratio: 0.3328553261756792 
+
+###############################trnMask.kept_attmap_count_seq#####################################
+trnMask.kept_attmap_count_seq (kept, total) : (145920, 145920.0), ratio: 1.0 
+
+###############################trnMask.kept_attmap_count_total for now#####################################
+trnMask.kept_attmap_count_total (kept, total) : (19110917529, 58642272000.0), ratio: 0.3258897869611873 
+ 98%|█████████▊| 31681/32363 [01:01<00:00, 4038.01it/s] 99%|█████████▉| 32193/32363 [01:01<00:00, 4269.28it/s]100%|██████████| 32363/32363 [01:01<00:00, 529.11it/s] 
+2025-01-03:14:51:46,714 INFO     [evaluator.py:319] Running loglikelihood_rolling requests
+
+#################in loglikelihood_rolling#####################
+Passed argument batch_size = auto. Detecting largest batch size
+Determined Largest batch size: 64
+  0%|          | 0/62 [00:00<?, ?it/s]  3%|▎         | 2/62 [00:00<00:03, 18.84it/s]  6%|▋         | 4/62 [00:00<00:03, 14.82it/s] 11%|█▏        | 7/62 [00:00<00:04, 13.05it/s] 15%|█▍        | 9/62 [00:00<00:04, 11.54it/s] 19%|█▉        | 12/62 [00:00<00:03, 12.66it/s] 27%|██▋       | 17/62 [00:01<00:02, 17.34it/s] 32%|███▏      | 20/62 [00:01<00:02, 18.10it/s] 37%|███▋      | 23/62 [00:01<00:02, 18.51it/s] 40%|████      | 25/62 [00:01<00:02, 15.54it/s] 44%|████▎     | 27/62 [00:01<00:02, 13.08it/s] 50%|█████     | 31/62 [00:01<00:01, 18.02it/s] 55%|█████▍    | 34/62 [00:02<00:01, 19.05it/s] 60%|█████▉    | 37/62 [00:02<00:01, 16.76it/s] 63%|██████▎   | 39/62 [00:02<00:01, 13.43it/s] 66%|██████▌   | 41/62 [00:02<00:01, 11.19it/s] 71%|███████   | 44/62 [00:02<00:01, 13.55it/s] 77%|███████▋  | 48/62 [00:03<00:00, 16.33it/s] 84%|████████▍ | 52/62 [00:03<00:00, 19.54it/s] 92%|█████████▏| 57/62 [00:03<00:00, 23.64it/s] 97%|█████████▋| 60/62 [00:03<00:00, 22.82it/s]100%|██████████| 62/62 [00:03<00:00, 16.88it/s]#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+#################in _loglikelihood_tokens#####################
+
+bootstrapping for stddev: perplexity
+  0%|          | 0/100 [00:00<?, ?it/s]  1%|          | 1/100 [00:00<00:54,  1.81it/s] 33%|███▎      | 33/100 [00:00<00:01, 49.63it/s] 41%|████      | 41/100 [00:01<00:01, 42.28it/s] 65%|██████▌   | 65/100 [00:01<00:00, 69.77it/s] 75%|███████▌  | 75/100 [00:01<00:00, 60.92it/s] 85%|████████▌ | 85/100 [00:01<00:00, 61.04it/s] 98%|█████████▊| 98/100 [00:01<00:00, 66.77it/s]100%|██████████| 100/100 [00:01<00:00, 55.83it/s]fatal: not a git repository (or any parent up to mount point /lustre)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+
+hf (pretrained=/lustre/fast/fast/txiao/shihan/saves/SepLLM/hf_checkpoints/debugs/160m_n64h_debug/global_step143000), gen_kwargs: (), limit: None, num_fewshot: 5, batch_size: auto (64)
+|    Tasks     |Version|Filter|n-shot|    Metric     | Value |   |Stderr|
+|--------------|-------|------|-----:|---------------|------:|---|-----:|
+|arc_challenge |Yaml   |none  |     5|acc            | 0.2056|±  |0.0118|
+|              |       |none  |     5|acc_norm       | 0.2440|±  |0.0126|
+|arc_easy      |Yaml   |none  |     5|acc            | 0.4827|±  |0.0103|
+|              |       |none  |     5|acc_norm       | 0.4499|±  |0.0102|
+|lambada_openai|Yaml   |none  |     5|perplexity     |37.3862|±  |1.2870|
+|              |       |none  |     5|acc            | 0.3035|±  |0.0064|
+|logiqa        |Yaml   |none  |     5|acc            | 0.2611|±  |0.0172|
+|              |       |none  |     5|acc_norm       | 0.2765|±  |0.0175|
+|piqa          |Yaml   |none  |     5|acc            | 0.6322|±  |0.0113|
+|              |       |none  |     5|acc_norm       | 0.6311|±  |0.0113|
+|sciq          |Yaml   |none  |     5|acc            | 0.7910|±  |0.0129|
+|              |       |none  |     5|acc_norm       | 0.7720|±  |0.0133|
+|wikitext      |Yaml   |none  |     5|word_perplexity|30.4669|   |      |
+|              |       |none  |     5|byte_perplexity| 1.8945|   |      |
+|              |       |none  |     5|bits_per_byte  | 0.9218|   |      |
+|winogrande    |Yaml   |none  |     5|acc            | 0.5162|±  |0.0140|
+|wsc           |Yaml   |none  |     5|acc            | 0.3558|±  |0.0472|
+

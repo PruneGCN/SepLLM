@@ -44,7 +44,7 @@ You can see other examples under ./Streaming-SepLLM/example_scripts/
 
 # Training
 
-You can install the required package in the requirements.txt. You are recommended to build a independent conda environment (or pyenv, etc.) to do this. Our code is based on the code framework [GPTNeoX](url=https://github.com/EleutherAI/gpt-neox).
+You can install the required package in the requirements.txt. You are recommended to build an independent conda environment (or pyenv, etc.) to do this. Our code is based on the code framework [GPTNeoX](url=https://github.com/EleutherAI/gpt-neox).
 
 
 
@@ -197,14 +197,14 @@ class SepLLMArgs(NeoXArgsTemplate):
 
 ```
 
-Remember to save your training process checkpoints, so that if the training is interrupted unexpectedly, you can resume the training. You can set the save dir in the config yml file.
+Remember to save your training checkpoints, so that if the training is interrupted unexpectedly, you can resume the training. You can set the saving directory in the configuration yml file.
 ```
   "save": "path/to/checkpoints",
   "load": "path/to/checkpoints",
 ```
 
 
-After the training is completed, we can convert the training checkpoints to the Hugging Face format, so that we can test them on downstream tasks （e.g. using [lm_eval](url=https://github.com/EleutherAI/lm-evaluation-harness)）.
+After the training is completed, you can convert the training checkpoints to the Hugging Face format, so that you can test them on downstream tasks (e.g. using [lm_eval](url=https://github.com/EleutherAI/lm-evaluation-harness)).
 
 ```
 python ./tools/ckpts/convert_neox_to_hf.py --input_dir path/to/checkpoints/global_stepXXX --config_file your_config.yml --output_dir hf_model/save/dir

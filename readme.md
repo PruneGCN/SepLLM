@@ -9,7 +9,7 @@ Large Language Models (LLMs) have exhibited exceptional performance across a spe
 Our long streaming evaluation is following [StreamingLLM](https://github.com/mit-han-lab/streaming-llm/).
 
 
-## Usage 
+## Usage
 ```
 conda create -yn streaming-sepllm python=3.8
 conda activate streaming-sepllm 
@@ -195,7 +195,7 @@ class SepLLMArgs(NeoXArgsTemplate):
     """
 ```
 
-Remember to save your training process checkpoints, so that if the training is interrupted unexpectedly, you can resume the training. You can set the save dir in the config yml file.
+Remember to save your training checkpoints, so that if the training is interrupted unexpectedly, you can resume the training. You can set the saving directory in the configuration yml file.
 ```
   "save": "path/to/checkpoints",
   "load": "path/to/checkpoints",

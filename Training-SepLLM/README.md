@@ -193,7 +193,6 @@ class SepLLMArgs(NeoXArgsTemplate):
     """
     True by default and should always be True. When True, it means when we choose fixed window to process the prefilling mask, the diagonal elements in the prefilling mask could be set negative. When False: would keep the prefilling mask's diagonal positive
     """
-
 ```
 
 Remember to save your training checkpoints, so that if the training is interrupted unexpectedly, you can resume the training. You can set the saving directory in the configuration yml file.

@@ -6,7 +6,7 @@ Large Language Models (LLMs) have exhibited exceptional performance across a spe
 
 
 # Long Streaming Inputs
-Our long streaming evaluation is following [StreamingLLM](url=https://github.com/mit-han-lab/streaming-llm/).
+Our long streaming evaluation is following [StreamingLLM](https://github.com/mit-han-lab/streaming-llm/).
 
 
 ## Usage
@@ -37,14 +37,14 @@ CUDA_VISIBLE_DEVICES=0  python ./main/evaluate_streaming_inputs_perplexity.py \
     --dataset_name pg19 \
     --task default \
     --split test\
-    --output_dir ./outputs/demo/llama3_8b_sepllm_len20480_ca800_loc256_sep64_init4_pg19_demo   2>&1 | tee ./logs/demo/llama3_8b_sepllm_len20480_ca800_loc256_sep64_init4_pg19_demo.log
+    --output_dir ./outputs/xxx   2>&1 | tee ./logs/demo/xxx.log
 ```
 You can see other examples under ./Streaming-SepLLM/example_scripts/
 
 
 # Training
 
-You can install the required package in the requirements.txt. You are recommended to build an independent conda environment (or pyenv, etc.) to do this. Our code is based on the code framework [GPTNeoX](url=https://github.com/EleutherAI/gpt-neox).
+You can install the required packages in the requirements.txt. You are recommended to build an independent conda environment (or pyenv, etc.) to do this. Our code is based on the code framework [GPTNeoX](https://github.com/EleutherAI/gpt-neox).
 
 
 
@@ -204,7 +204,7 @@ Remember to save your training checkpoints, so that if the training is interrupt
 ```
 
 
-After the training is completed, you can convert the training checkpoints to the Hugging Face format, so that you can test them on downstream tasks (e.g. using [lm_eval](url=https://github.com/EleutherAI/lm-evaluation-harness)).
+After the training is completed, you can convert the training checkpoints to the Hugging Face format, so that you can test them on downstream tasks (e.g. using [lm_eval](https://github.com/EleutherAI/lm-evaluation-harness)).
 
 ```
 python ./tools/ckpts/convert_neox_to_hf.py --input_dir path/to/checkpoints/global_stepXXX --config_file your_config.yml --output_dir hf_model/save/dir

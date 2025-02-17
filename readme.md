@@ -5,9 +5,8 @@ Large Language Models (LLMs) have exhibited exceptional performance across a spe
 ![image](https://hackmd.io/_uploads/r1POJoR4yg.png)
 
 
-
 # Long Streaming Inputs
-Our long streaming evaluation is following [StreamingLLM.](https://github.com/mit-han-lab/streaming-llm/)
+Our long streaming evaluation is following [StreamingLLM](https://github.com/mit-han-lab/streaming-llm/).
 
 
 ## Usage 
@@ -44,7 +43,7 @@ You can see other examples under ./Streaming-SepLLM/example_scripts/
 
 # Training
 
-You can install the required package in the requirements.txt. You are recommended to build a independent conda environment (or pyenv, etc.) to do this. Our code is based on the code framework [GPTNeoX](https://github.com/EleutherAI/gpt-neox).
+You can install the required packages in the requirements.txt. You are recommended to build an independent conda environment (or pyenv, etc.) to do this. Our code is based on the code framework [GPTNeoX](https://github.com/EleutherAI/gpt-neox).
 
 
 
@@ -203,7 +202,7 @@ Remember to save your training process checkpoints, so that if the training is i
 ```
 
 
-After the training is completed, we can convert the training checkpoints to the Hugging Face format, so that we can test them on downstream tasks （e.g. using [lm_eval](url=https://github.com/EleutherAI/lm-evaluation-harness)）.
+After the training is completed, you can convert the training checkpoints to the Hugging Face format, so that you can test them on downstream tasks (e.g. using [lm_eval](https://github.com/EleutherAI/lm-evaluation-harness)).
 
 ```
 python ./tools/ckpts/convert_neox_to_hf.py --input_dir path/to/checkpoints/global_stepXXX --config_file your_config.yml --output_dir hf_model/save/dir

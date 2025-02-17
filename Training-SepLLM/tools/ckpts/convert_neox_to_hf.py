@@ -333,10 +333,9 @@ def create_config(neox_config, architecture="sepllm_gpt_neox"):
         # print(f"#########################architecture: {architecture}##################################")
 
         if  architecture == "sepllm_gpt_neox":
-            # hf_config = GPTNeoXConfig(**args)  ## default
+
             hf_config = SepLLMGPTNeoXConfig(**args) ##my SepLLM
-            # print(f"######################hf_config###############################")
-            # print(hf_config)
+
         else:
             hf_config = GPTNeoXConfig(**args)  ## default
 
@@ -452,14 +451,9 @@ def convert(
 
     ARCH = MODEL_KEYS[architecture]
 
-    hf_config = create_config(loaded_config, architecture=architecture)
-
-    print(f"debug: ###########################before  hf_model = AutoModelForCausalLM.from_config(hf_config)##############################")
+    hf_config = create_config(loaded_config, architecture=architecture)    
 
     hf_model = AutoModelForCausalLM.from_config(hf_config)
-    print(f"debug: ###########################after  hf_model = AutoModelForCausalLM.from_config(hf_config)##############################")
-
-    # print(f"######################hf_model: {hf_model}############################")
 
     if architecture == "neox":
         hf_transformer = hf_model.gpt_neox
@@ -829,15 +823,9 @@ def main(input_args=None, overwrite_values=None):
             #############################my##############################
             from transformers import GPTNeoXTokenizerFast
 
-            # from transformers import AutoTokenizer
-
-            # print(f"############debug: {get_key(loaded_config, 'vocab-file')} ")
-
             tokenizer = GPTNeoXTokenizerFast(
                 tokenizer_file=get_key(loaded_config, "vocab-file")
             )    
-
-
 
             # from transformers import AutoTokenizer
             # tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-neox-20b")

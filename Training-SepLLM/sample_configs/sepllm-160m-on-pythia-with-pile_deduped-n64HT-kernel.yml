@@ -92,12 +92,12 @@
   "steps_per_print": 10,
   "wall_clock_breakdown": true,
 
-  "train-data-paths": ["/lustre/fast/fast/txiao/shihan/compressed_pythia_data/pile_0.87_deduped_text_document"],
-  "valid-data-paths": ["/lustre/fast/fast/txiao/shihan/compressed_pythia_data/pile_0.87_deduped_text_document"],
-  "test-data-paths": ["/lustre/fast/fast/txiao/shihan/compressed_pythia_data/pile_0.87_deduped_text_document"],
+  "train-data-paths": ["/path/to/pythia_data/pile_0.87_deduped_text_document"],
+  "valid-data-paths": ["/path/to/pythia_data/pile_0.87_deduped_text_document"],
+  "test-data-paths": ["/path/to/pythia_data/pile_0.87_deduped_text_document"],
 
   "tokenizer-type": "HFTokenizer",
-  "vocab-file": "/lustre/fast/fast/txiao/shihan_new/workspace/SepLLM/Training-SepLLM/sample_configs/20B_tokenizer.json",
+  "vocab-file": "/path/to/SepLLM/Training-SepLLM/sample_configs/20B_tokenizer.json",
 
   "launcher": "pdsh",
 

@@ -10,7 +10,6 @@ Our long streaming evaluation is following [StreamingLLM](https://github.com/mit
 
 
 ## Usage
-
 ```
 conda create -yn streaming-sepllm python=3.8
 conda activate streaming-sepllm 

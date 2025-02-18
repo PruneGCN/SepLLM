@@ -1,8 +1,3 @@
-# Copyright (c) 2024, EleutherAI
-# This file is based on code by the authors denoted below and has been modified from its original version.
-#
-# Copyright (c) 2024, NVIDIA CORPORATION.  All rights reserved.
-#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -15,7 +10,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Evaluation tasks - modified from https://github.com/EleutherAI/lm-evaluation-harness"""
+
 import os
 import sys
 
